@@ -40,6 +40,8 @@ app.use(function(req, res, next) {
 
 app.use("/", require("./routes/users"));
 
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, console.log("Server running on ", PORT));
+// app.listen(PORT, console.log("Server running on ", PORT));
+
+module.exports = app;
