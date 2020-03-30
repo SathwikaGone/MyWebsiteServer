@@ -206,7 +206,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/MyWebsiteServer/devv/1585606975040-2020-03-30T22:22:55.040Z/MyWebsiteServer.zip"
+                "S3Key": "serverless/MyWebsiteServer/devv/1585610976524-2020-03-30T23:29:36.524Z/MyWebsiteServer.zip"
               },
               "FunctionName": "MyWebsiteServer-devv-api",
               "Handler": "s_api.handler",
@@ -225,14 +225,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "ApiLambdaVersiongGIkZrTumfJZyGhu2iqOeeBjC45B937m2dPdoaQP8pY": {
+          "ApiLambdaVersionjCzwayE6FstSyDsHUOABz2SYqSJHjHCO3fQod0CPB0": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "2GYyD7jppoj2W1P2ygW8h5P2/TZAdmmbYlY5UF65FYA="
+              "CodeSha256": "Wo1SSR1tSn6Y9N0GLmiEOsfQZrsesGRy7vPsvZx15+A="
             }
           },
           "ApiGatewayRestApi": {
@@ -351,7 +351,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1585606955677": {
+          "ApiGatewayDeployment1585610957782": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -510,7 +510,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/MyWebsiteServer/devv/1585606975040-2020-03-30T22:22:55.040Z/custom-resources.zip"
+                "S3Key": "serverless/MyWebsiteServer/devv/1585610976524-2020-03-30T23:29:36.524Z/custom-resources.zip"
               },
               "FunctionName": "MyWebsiteServer-devv-custom-resource-apigw-cw-role",
               "Handler": "apiGatewayCloudWatchRole/handler.handler",
@@ -566,7 +566,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersiongGIkZrTumfJZyGhu2iqOeeBjC45B937m2dPdoaQP8pY"
+              "Ref": "ApiLambdaVersionjCzwayE6FstSyDsHUOABz2SYqSJHjHCO3fQod0CPB0"
             }
           },
           "ServiceEndpoint": {
@@ -686,7 +686,7 @@
         "timeout": 15,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersiongGIkZrTumfJZyGhu2iqOeeBjC45B937m2dPdoaQP8pY"
+        "versionLogicalId": "ApiLambdaVersionjCzwayE6FstSyDsHUOABz2SYqSJHjHCO3fQod0CPB0"
       }
     },
     "serviceFilename": "serverless.yml",
@@ -700,7 +700,7 @@
     "artifact": "C:\\Users\\gones\\OneDrive\\Desktop\\MyWebsite\\MyWebsiteServer\\.serverless\\MyWebsiteServer.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/MyWebsiteServer/devv/1585606975040-2020-03-30T22:22:55.040Z",
+    "artifactDirectoryName": "serverless/MyWebsiteServer/devv/1585610976524-2020-03-30T23:29:36.524Z",
     "artifact": "MyWebsiteServer.zip"
   }
 }

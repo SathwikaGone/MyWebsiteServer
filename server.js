@@ -44,4 +44,4 @@ app.use("/", require("./routes/users"));
 
 // app.listen(PORT, console.log("Server running on ", PORT));
 
-module.exports = app;
+module.exports = server;
