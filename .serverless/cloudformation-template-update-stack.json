@@ -59,7 +59,7 @@
     "ApiLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/MyWebsiteServer-devv-api"
+        "LogGroupName": "/aws/lambda/MyWebsiteServer-devp-api"
       }
     },
     "IamRoleLambdaExecution": {
@@ -87,7 +87,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "MyWebsiteServer-devv",
+                  "MyWebsiteServer-devp",
                   "lambda"
                 ]
               ]
@@ -103,7 +103,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/MyWebsiteServer-devv*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/MyWebsiteServer-devp*:*"
                     }
                   ]
                 },
@@ -114,7 +114,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/MyWebsiteServer-devv*:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/MyWebsiteServer-devp*:*:*"
                     }
                   ]
                 }
@@ -127,7 +127,7 @@
           "Fn::Join": [
             "-",
             [
-              "MyWebsiteServer-devv",
+              "MyWebsiteServer-devp",
               {
                 "Ref": "AWS::Region"
               },
@@ -190,9 +190,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/MyWebsiteServer/devv/1585610976524-2020-03-30T23:29:36.524Z/MyWebsiteServer.zip"
+          "S3Key": "serverless/MyWebsiteServer/devp/1585615575862-2020-03-31T00:46:15.862Z/MyWebsiteServer.zip"
         },
-        "FunctionName": "MyWebsiteServer-devv-api",
+        "FunctionName": "MyWebsiteServer-devp-api",
         "Handler": "s_api.handler",
         "MemorySize": 512,
         "Role": {
@@ -209,20 +209,20 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ApiLambdaVersionjCzwayE6FstSyDsHUOABz2SYqSJHjHCO3fQod0CPB0": {
+    "ApiLambdaVersionFKU5jaUKiaMNBVJSFlljVInDbiIySUQhXq2sl2D1c": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "Wo1SSR1tSn6Y9N0GLmiEOsfQZrsesGRy7vPsvZx15+A="
+        "CodeSha256": "vzybGLpPWuw807Cd+mZtDBuklcBEydDQdc7W6vcTP30="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "devv-MyWebsiteServer",
+        "Name": "devp-MyWebsiteServer",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -335,13 +335,13 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1585610957782": {
+    "ApiGatewayDeployment1585615558944": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "StageName": "devv"
+        "StageName": "devp"
       },
       "DependsOn": [
         "ApiGatewayMethodProxyVarAny",
@@ -388,7 +388,7 @@
     "ApiGatewayLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/api-gateway/MyWebsiteServer-devv"
+        "LogGroupName": "/aws/api-gateway/MyWebsiteServer-devp"
       }
     },
     "CustomApiGatewayAccountCloudWatchRole": {
@@ -428,7 +428,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "devv",
+                  "devp",
                   "MyWebsiteServer",
                   "custom-resources-lambda"
                 ]
@@ -494,9 +494,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/MyWebsiteServer/devv/1585610976524-2020-03-30T23:29:36.524Z/custom-resources.zip"
+          "S3Key": "serverless/MyWebsiteServer/devp/1585615575862-2020-03-31T00:46:15.862Z/custom-resources.zip"
         },
-        "FunctionName": "MyWebsiteServer-devv-custom-resource-apigw-cw-role",
+        "FunctionName": "MyWebsiteServer-devp-custom-resource-apigw-cw-role",
         "Handler": "apiGatewayCloudWatchRole/handler.handler",
         "MemorySize": 1024,
         "Runtime": "nodejs12.x",
@@ -515,7 +515,7 @@
     "CloudWatchLogsSubscriptionFilterApiLogGroup": {
       "Type": "AWS::Logs::SubscriptionFilter",
       "Properties": {
-        "DestinationArn": "arn:aws:logs:us-east-2:802587217904:destination:ZS34mF3Dk73RPHdcdY#P536NBfFTRqjSSSmWL#MyWebsiteServer#devv",
+        "DestinationArn": "arn:aws:logs:us-east-2:802587217904:destination:ZS34mF3Dk73RPHdcdY#NwX4WrXZ90gfgVQjTy#MyWebsiteServer#devp",
         "FilterPattern": "?\"REPORT RequestId: \" ?\"SERVERLESS_ENTERPRISE\"",
         "LogGroupName": {
           "Ref": "ApiLogGroup"
@@ -525,7 +525,7 @@
     "CloudWatchLogsSubscriptionFilterApiGatewayLogGroup": {
       "Type": "AWS::Logs::SubscriptionFilter",
       "Properties": {
-        "DestinationArn": "arn:aws:logs:us-east-2:802587217904:destination:ZS34mF3Dk73RPHdcdY#P536NBfFTRqjSSSmWL#MyWebsiteServer#devv",
+        "DestinationArn": "arn:aws:logs:us-east-2:802587217904:destination:ZS34mF3Dk73RPHdcdY#NwX4WrXZ90gfgVQjTy#MyWebsiteServer#devp",
         "FilterPattern": "\"SLS_ACCESS_LOG\"",
         "LogGroupName": {
           "Ref": "ApiGatewayLogGroup"
@@ -550,7 +550,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionjCzwayE6FstSyDsHUOABz2SYqSJHjHCO3fQod0CPB0"
+        "Ref": "ApiLambdaVersionFKU5jaUKiaMNBVJSFlljVInDbiIySUQhXq2sl2D1c"
       }
     },
     "ServiceEndpoint": {
@@ -571,7 +571,7 @@
             {
               "Ref": "AWS::URLSuffix"
             },
-            "/devv"
+            "/devp"
           ]
         ]
       }

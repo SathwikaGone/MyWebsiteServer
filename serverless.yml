@@ -1,5 +1,5 @@
 org: gonesathwika
-app: mywebsiteserver-app
+app: mywebsiteserverapp
 service: MyWebsiteServer #Name of your App
 
 provider:
@@ -7,7 +7,7 @@ provider:
   runtime: nodejs10.x # Node JS version
   memorySize: 512
   timeout: 15
-  stage: devv
+  stage: devp
   region: us-east-2 # AWS region
 
 functions:
